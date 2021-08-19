@@ -144,7 +144,7 @@ body {
 }
 .content {
     width: 100%;
-    height: 50vh;
+    min-height: 50vh;
     background-color: #fff;
     margin: 20px 0;
     display : flex;
@@ -233,5 +233,46 @@ body {
     }
     .slide-right {
         display: none;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 900px;
+        margin: 0;
+    }
+    .content {
+        width: 100%;
+        text-align: left;
+        min-height: 100vh;
+        margin: 0;
+        display : flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .content-left {
+        flex: 0.3;
+        width: 95%;
+        background:none;
+        margin: 0 auto;
+    }
+    .story {
+        width: 80%;
+        height: 100%;
+        margin: 5px auto;
+        display: flex;
+        flex-direction: column;
+        object-fit: contain;
+    }
+    .story-body {
+        width: 100%;
+    }
+    .story-body-head {
+        width: 100%;
+    }
+    .content-right{
+        flex: 0.6;
+        width: 95%;
+        margin: 0 auto;
     }
 }
