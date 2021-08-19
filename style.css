@@ -4,6 +4,8 @@ html,body {
     width: 100vw;
     min-height: 100vh;
     font-family: "Rubik",sans-serif;
+    background-color: #EFF0F2;
+    overflow-x: hidden;
 }
 
 /* top section of the body */
@@ -130,5 +132,53 @@ html,body {
   to {opacity: 1}
 }
 
+/* Body Section */
+.container {
+    width: 85vw;
+    max-width: 900px;
+    margin: 5px auto;
+}
+.content {
+    width: 100%;
+    height: 50vh;
+    background-color: #fff;
+    margin: 20px 0;
+    display : flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.content-left {
+    flex: 0.6;
+    height: 90%;
+    background:none;
+}
+.story {
+    width: 100%;
+    height: 40%;
+    margin: 5px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    object-fit: contain;
+}
+.main-story{
+    height: 100% !important;
+}
+.story-image {
+    width: 100%;
+    height: 70%;
+}
+.story-body {
+    height: 25%;
+    margin-top: 10px;
+}
+.story-body-head {
+    font-size: 1.5rem;
+}
+.content-right {
+    flex: 0.35;
+    height: 90%;
+}
 
 /* Head : font-family: 'Roboto Slab', serif; */
