@@ -33,8 +33,7 @@ function toggleMenu(){
   console.log(hamburgerBtn.classList)
 }
 
-function hideMenuOnSmallScreen(){
   if(window.innerWidth<=640){
     navRight.classList.add("nav-hidden")
   }
-}
+
