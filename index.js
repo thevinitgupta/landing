@@ -17,3 +17,24 @@ function showSlides() {
   dots[slideIndex-1].classList.add("active")
   setTimeout(showSlides, 10000); // Change image every 2 seconds
 }
+
+let navRight = document.querySelector(".nav-right");
+let hamburgerBtn = document.querySelector(".hamburger-btn");
+
+function toggleMenu(){
+  if(hamburgerBtn.classList.length<2){
+    hamburgerBtn.classList.add("hamburger-btn-clicked")
+    navRight.classList.remove("nav-hidden")
+  }
+  else {
+    hamburgerBtn.classList.remove("hamburger-btn-clicked")
+    navRight.classList.add("nav-hidden")
+  }
+  console.log(hamburgerBtn.classList)
+}
+
+function hideMenuOnSmallScreen(){
+  if(window.innerWidth<=640){
+    navRight.classList.add("nav-hidden")
+  }
+}

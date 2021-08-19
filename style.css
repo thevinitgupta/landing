@@ -36,6 +36,9 @@ body {
     letter-spacing: 4px;
     color : #1987AC;
 }
+.hamburger-btn {
+    display: none;
+}
 .nav-right {
     flex: 0.6;
     list-style: none;
@@ -153,7 +156,7 @@ body {
 }
 .content-left {
     flex: 0.6;
-    height: 90%;
+    height: 100%;
     background:none;
 }
 .story {
@@ -163,7 +166,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     object-fit: contain;
 }
 .main-story{
@@ -206,8 +209,66 @@ body {
     }
 }
 @media screen and (max-width : 640px) {
+    .top {
+        position: relative;
+    }
+    .hamburger-btn{
+        display: none; 
+        align-self: flex-end;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        padding: 5px;
+        width: 80px;
+        height: 80%;
+    }
+    .hamburger-btn-top,.hamburger-btn-mid,.hamburger-btn-bottom{
+        width: 40%;
+        height: 1.5px;
+        border: none;
+        border-radius: 0.5px;
+        background-color: #2b2e4a;
+        margin: 4px 0;
+        transition: all 300ms ease-in-out;
+    }
+    .hamburger-btn-clicked > .hamburger-btn-top,
+    .hamburger-btn-clicked >.hamburger-btn-bottom{
+        margin: 0;
+    }
+    .hamburger-btn-clicked > .hamburger-btn-top{
+        transform-origin: center;
+        transform: rotate(45deg);
+    }
+    .hamburger-btn-clicked >.hamburger-btn-bottom{
+        transform-origin: center;
+        transform: rotate(-45deg);
+    } 
+    .hamburger-btn-clicked >.hamburger-btn-mid{
+        display: none;
+    }
+    .nav-right {
+        display: inherit;
+        flex-direction: column;
+        position: absolute;
+        top: 37px;
+        left: 0;
+        z-index: 10;
+        background-color: #fff;
+        width: 100vw;
+        height: 65vh;
+        justify-content: space-around;
+        text-align: center;
+    }
+    .nav-link>a {
+        font-size: 1.4rem;
+    }
+    .nav-hidden {
+        display: none;
+    }
     .mid {
-        height: 70vh;
+        height: 85vh;
     }
     .slide {
         width: 100%;
